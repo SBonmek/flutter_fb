@@ -59,4 +59,5 @@ class DefaultFirebaseOptions {
     projectId: 'flutterfb-d4951',
     storageBucket: 'flutterfb-d4951.appspot.com',
   );
+
 }
