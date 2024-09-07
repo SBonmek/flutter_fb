@@ -49,7 +49,7 @@ class MainApp extends StatelessWidget {
                 onPressed: () async {
                   print(await FirebaseMessaging.instance.getToken());
                 },
-                child: const Text("Throw Error"),
+                child: const Text("Get Token"),
               ),
             ],
           ),
