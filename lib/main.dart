@@ -1,3 +1,4 @@
+import 'package:app_links/app_links.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -27,8 +28,26 @@ void main() async {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
+
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  @override
+  void initState() {
+    super.initState();
+
+    final appLinks = AppLinks(); // AppLinks is singleton
+
+// Subscribe to all events (initial link and further)
+    final sub = appLinks.uriLinkStream.listen((uri) {
+      // Do something (navigation, ...)
+      print(uri);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

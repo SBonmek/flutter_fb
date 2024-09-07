@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.flutter_firebase",
+      "sha256_cert_fingerprints":
+        ["49:1F:28:D6:99:EF:6B:10:D4:89:41:B4:4C:EA:1D:16:4F:22:02:DF:A3:D8:1E:D7:8B:2E:87:B0:49:95:93:9C"]
+    }
+  }]
